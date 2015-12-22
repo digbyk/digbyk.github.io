@@ -1,6 +1,8 @@
 html, body {
 	background-color: white;
 	height: 100px;
+	margin: 0;
+	padding: 0;
 }
 body>section {
 	height: 400px;
