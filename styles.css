@@ -1,0 +1,10 @@
+html, body {
+	background-color: white;
+	height: 100px;
+}
+body>section {
+	height: 400px;
+}
+body>section:nth-child(1) {
+	background-color: #666;
+}
