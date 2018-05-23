@@ -4,9 +4,9 @@
   height: 60px;
 }
 .SearchNavInner {
-  max-width: 100%;
+  max-width: 800px;
   margin: 0px auto;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .SearchWidget {
   background-color: #053175;
