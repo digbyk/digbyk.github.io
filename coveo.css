@@ -18,6 +18,7 @@
 }
 .coveo-search-section {
   margin: 1em auto 1em auto !important;
+  padding: 0 !important;
 }
 .CoveoTab {
   color: #ddd;
