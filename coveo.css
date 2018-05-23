@@ -28,3 +28,6 @@
 }
 .CoveoTab:hover {
 }
+a, a:hover {
+  color: #0090dd;
+}
