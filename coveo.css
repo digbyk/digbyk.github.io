@@ -4,11 +4,10 @@
   height: 60px;
 }
 .SearchWidget {
-  
-}
-.coveo-tab-section {
   background-color: #055bb5;
   color: white;
+}
+.coveo-tab-section {
   border-bottom: 0;
 }
 .CoveoTab {
