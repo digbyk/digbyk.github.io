@@ -4,5 +4,8 @@
   border-bottom: 0;
 }
 .CoveoTab {
+  color: #ddd;
+}
+.CoveoTab:hover {
   color: white;
 }
