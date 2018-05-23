@@ -6,6 +6,7 @@
 .SearchWidget {
   background-color: #055bb5;
   color: white;
+  padding: 1em;
 }
 .coveo-tab-section {
   border-bottom: 0;
