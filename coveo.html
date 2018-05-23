@@ -1,39 +1,66 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Sophos Coveo Test</title>
-    <meta name="description" content="Sophos Coveo Test">
-    <!-- Coveo JS Search Framework CSS -->
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, height=device-height" >
+    <title>Title</title>
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearch.css" />
-    <!-- Coveo JS Search Framework Minified JS (lazy version) -->
     <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
-
-    <!-- Coveo JS Search Framework Minified JS (eager version) -->
-    <!--<script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.min.js"></script>-->
-
-    <!-- Coveo JS Search Framework result templates -->
     <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templates.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        var root = document.body;
-        Coveo.SearchEndpoint.endpoints['default'] = new Coveo.SearchEndpoint({
-          restUri: 'https://platform.cloud.coveo.com/rest/search',
-          accessToken: 'xx379740a2-96de-47d0-9bd6-4ca42bccdc1a'
-        });
-        Coveo.init(root);
+        Coveo.SearchEndpoint.configureSampleEndpointV2();
+        Coveo.init(document.body);
       })
     </script>
   </head>
-<!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
-<body id="search" class='CoveoSearchInterface'>
-  <!-- Each DOM element with a class starting with "coveo-" (lowercase) is for CSS or alignment purpose only. -->
-  <div class='coveo-search-section'>
-      <!-- Note that any Coveo component can be removed (or added); none is actually required for the page to load. -->
-      <div class="CoveoSearchbox"></div>
-  </div>
-  <!-- The "data-" attributes of each component allow you to set options for a specific instance of that component. -->
-  <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="All"></div>
-  <div class="CoveoFacet" data-title="Year" data-field="@year" data-tab="All"></div>
-</body>
+  <body id="search" class='CoveoSearchInterface' data-enable-history="true">
+    <div class="CoveoHelloWorld"></div>
+    <div class="coveo-tab-section">
+      <a class="CoveoTab" data-id="All" data-caption="All Content"></a>
+    </div>
+    <div class='coveo-search-section'>
+      <div class="CoveoSettings"></div>
+      <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
+    </div>
+    <div class="coveo-main-section">
+      <div class="coveo-facet-column">
+        <div class="CoveoFacet" data-title="Type" data-field="@objecttype" data-tab="All"></div>
+        <div class="CoveoFacet" data-title="FileType" data-field="@filetype" data-tab="All"></div>
+        <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="All"></div>
+        <div class="CoveoFacet" data-title="Year" data-field="@year" data-tab="All"></div>
+        <div class="CoveoFacet" data-title="Month" data-field="@month" data-tab="All"></div>
+      </div>
+      <div class="coveo-results-column">
+        <div class="CoveoShareQuery"></div>
+        <div class="CoveoExportToExcel"></div>
+        <div class="CoveoPreferencesPanel">
+          <div class="CoveoResultsPreferences"></div>
+          <div class="CoveoResultsFiltersPreferences"></div>
+        </div>
+        <div class="CoveoBreadcrumb"></div>
+        <div class="coveo-results-header">
+          <div class="coveo-summary-section">
+            <span class="CoveoQuerySummary"></span>
+            <span class="CoveoQueryDuration"></span>
+          </div>
+          <div class="coveo-result-layout-section">
+            <span class="CoveoResultLayout"></span>
+          </div>
+          <div class="coveo-sort-section">
+            <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance"></span>
+            <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date"></span>
+          </div>
+        </div>
+        <div class="CoveoHiddenQuery"></div>
+        <div class="CoveoDidYouMean"></div>
+        <div class="CoveoErrorReport"></div>
+        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true"></div>
+        <div class="CoveoResultList" data-layout="card" data-wait-animation="fade" data-auto-select-fields-to-include="true"></div>
+        <div class="CoveoPager"></div>
+        <div class="CoveoLogo"></div>
+        <div class="CoveoResultsPerPage"></div>
+      </div>
+    </div>
+  </body>
 </html>
