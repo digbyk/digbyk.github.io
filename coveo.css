@@ -4,7 +4,7 @@
   height: 60px;
 }
 .SearchNavInner {
-  max-width: 800px;
+  max-width: 62.5rem;
   margin: 0px auto;
   padding: 20px 0;
 }
@@ -17,6 +17,7 @@
   border-bottom: 0;
 }
 .coveo-search-section {
+  max-width: 62.5rem !important;
   margin: 1em auto 1em auto !important;
   padding: 0 !important;
 }
