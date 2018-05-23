@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, height=device-height" >
-    <title>Title</title>
+    <title>Sophos Coveo Test Interface</title>
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearch.css" />
     <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
     <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templates.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        Coveo.SearchEndpoint.configureSampleEndpointV2();
-        Coveo.init(document.body);
-      })
-    </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var root = document.body;
+      Coveo.SearchEndpoint.endpoints['default'] = new Coveo.SearchEndpoint({
+        restUri: 'https://platform.cloud.coveo.com/rest/search',
+        accessToken: 'xx7d2180e0-b410-4692-9979-982ca35acd9c'
+      });
+      Coveo.init(root);
+    })
+  </script>
   </head>
   <body id="search" class='CoveoSearchInterface' data-enable-history="true">
     <div class="CoveoHelloWorld"></div>
