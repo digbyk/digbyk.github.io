@@ -72,7 +72,20 @@
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport"></div>
         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true"></div>
-        <div class="CoveoResultList" data-layout="card" data-wait-animation="fade" data-auto-select-fields-to-include="true"></div>
+        <div class="CoveoResultList" data-layout="card" data-wait-animation="fade" data-auto-select-fields-to-include="true">
+  <script id="my-card-template" class="result-template" type="text/html">
+    <div class="coveo-result-frame">
+      <!-- Some content... -->
+      <div class="CoveoCardActionBar">
+        <div class="CoveoCardOverlay" data-title="Open me" data-icon="replies">
+          <!-- Put the content of the overlay here -->
+          <div class="CoveoText" data-value="Here is some additional info" style="margin: 5px"></div>
+          <div class="CoveoText" data-value="Here is some additional info" style="margin: 5px"></div>
+
+      </div>
+    </div>
+  </script>
+        </div>
         <div class="CoveoResultList" data-layout="table" data-wait-animation="fade" data-auto-select-fields-to-include="true"></div>
         <div class="CoveoPager"></div>
         <div class="CoveoLogo"></div>
