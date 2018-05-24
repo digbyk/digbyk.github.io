@@ -81,10 +81,17 @@
         <div class="CoveoQuickview"></div>
         <div class="CoveoCardOverlay" data-title="Details" data-icon="replies">
           <!-- Put the content of the overlay here -->
-          <div class="CoveoFieldValue" data-field="@title"></div>
-          <div class="CoveoFieldValue" data-field="@data"></div>
-          <div class="CoveoText" data-value="Here is some additional info" style="margin: 5px"></div>
-
+            <table>
+              <tr>
+                <th>Name</th>
+                <td><div class="CoveoFieldValue" data-field="@title"></td>
+                <th>Description</th>
+                <td><div class="CoveoFieldValue" data-field="@data"></td>
+                <th>SHA-1</th>
+                <td><div class="CoveoFieldValue" data-field="@data"></td>
+              </tr>
+            </table>
+          </div>
       </div>
     </div>
   </script>
