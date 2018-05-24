@@ -74,7 +74,36 @@
         <div class="CoveoErrorReport"></div>
         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true">
           <script id='myFirstResultTemplate' class='result-template' type='text/underscore' data-condition='raw.documenttype=="Virus Definition"'>
-            Hello
+            <div class="coveo-result-frame">
+              <div class="coveo-result-row">
+                <div class="coveo-result-cell">
+                  <span class="CoveoIcon"></span>
+                </div>
+                <div class="coveo-result-cell">
+                  <a class="CoveoResultLink"></a>
+                  <span class="CoveoQuickview"><div class='coveo-icon-for-quickview'>Quickview</div></span>
+                </div>
+                <div class="coveo-result-cell">
+                  <span class="CoveoFieldValue"></span>
+                </div>
+              </div>
+              <div class="coveo-result-row">
+                <div class="coveo-result-cell"></div>         // You can add an empty cell to add spacing between elements.
+                <div class="coveo-result-cell">
+                  <span class="CoveoExcerpt"></span>
+                </div>
+              </div>
+              <div class="coveo-result-row">
+                <div class="coveo-result-cell"></div>
+                <div class="coveo-result-cell">
+                  <table class="CoveoFieldTable">
+                    <tbody>
+                      <tr data-field="@sysauthor" data-caption="Author"></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </script>
 
         </div>
