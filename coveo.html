@@ -72,35 +72,12 @@
         <div class="CoveoHiddenQuery"></div>
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport"></div>
-        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true"></div>
-        <div class="CoveoResultList" data-layout="card" data-wait-animation="fade" data-auto-select-fields-to-include="true">
-  <script id="my-card-template" class="result-template" type="text/html">
-    <div class="coveo-result-frame">
-      <div class="CoveoFieldValue" data-field="@title"></div>
-      <div class="CoveoCardActionBar">
-        <div class="CoveoQuickview"></div>
-        <div class="CoveoCardOverlay" data-title="Details" data-icon="replies">
-          <!-- Put the content of the overlay here -->
-            <table>
-              <tr>
-                <td>Name</td>
-                <td><div class="CoveoFieldValue" data-field="@title"></td>
-              </tr>
-              <tr>
-                <td>Description</td>
-                <td><div class="CoveoFieldValue" data-field="@data"></td>
-              </tr>
-              <tr>
-                <td>Size</td>
-                <td><div class="CoveoFieldValue" data-field="@size"></td>
-              </tr>
-            </table>
-          </div>
-      </div>
-    </div>
-  </script>
+        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true">
+          <script id='myFirstResultTemplate' class='result-template' type='text/underscore' data-condition='raw.documenttype=="Virus Definition"'>
+            Hello
+          </script>
+
         </div>
-        <div class="CoveoResultList" data-layout="table" data-wait-animation="fade" data-auto-select-fields-to-include="true"></div>
         <div class="CoveoPager"></div>
         <div class="CoveoLogo"></div>
         <div class="CoveoResultsPerPage"></div>
