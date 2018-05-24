@@ -34,7 +34,7 @@
     <div class="coveo-tab-section">
       <a class="CoveoTab" data-id="All" data-caption="All Content" data-enable-duplicate-filtering="true" data-icon="coveo-sprites-salesforce-standard-drafts"></a>
       <a class="CoveoTab" data-id="Web" data-caption="Web" data-enable-duplicate-filtering="true" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-drafts" data-expression="@source==(Web)"></a>
-      <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="true" data-expression="@source==(KB, Labs)"></a>
+      <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="true" data-expression="@source==(Community, KB, Ideas, Labs)"></a>
       <a class="CoveoTab" data-id="Labs" data-caption="Labs" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="true" data-expression="@source==(Labs)"></a>
       <a class="CoveoTab" data-id="Blogs" data-caption="Blogs" data-icon="coveo-sprites-salesforce-standard-note" data-endpoint="default" data-expression="@source==(Blogs)"></a>
       <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-icon="coveo-sprites-salesforce-standard-scan-card" data-expression="@source==(YouTube)"></a>
@@ -42,7 +42,7 @@
     </div>
     <div class="coveo-main-section">
       <div class="coveo-facet-column">
-        <div class="CoveoFacet" data-title="Source" data-field="@source" data-number-of-values="6" data-custom-sort="sophos.com, community forums, nakedsecurity, knowledgebase, ideas"></div>
+        <div class="CoveoFacet" data-title="Source" data-field="@source" data-number-of-values="6" data-custom-sort="Web, Community, Blogs, KB, Ideas"></div>
         <div class="CoveoFacet" data-title="Language" data-field="@language" data-custom-sort="english, french, german, spanish, italian, portuguese, chinese, japanese, danish" data-number-of-values="10" data-allowed-values="english, french, spanish, japanese, chinese"></div>
         <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="Support, Videos"></div>
         <div class="CoveoFacet" data-title="Document Type" data-field="@documenttype" data-tab="Support, Labs"></div>
