@@ -20,6 +20,7 @@
   </script>
   </head>
   <body id="search" class='CoveoSearchInterface' data-enable-history="true" data-pipeline="Marketing" data-enable-search-as-you-type="false" data-enable-reveal-query-suggest-addon="true" data-enable-query-syntax="true" data-enable-field-addon="true">
+    <div class="CoveoAnalytics"></div>
     <div class="SearchNav">
       <div class="SearchNavInner">
         <img src="https://www.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png?h=18&la=en&w=102&hash=C08035F311988437F825017DEA39C7209A8518EF"/>
@@ -28,15 +29,15 @@
     <div class="SearchWidget">
       <div class='coveo-search-section'>
         <div class="CoveoSearchbox">
-            <div class="CoveoFacetValueSuggestions" data-field="@source"></div>
+            <div class="CoveoFieldSuggestions" data-field="@title"></div>
         </div>
       </div>
     </div>
     <div class="coveo-tab-section">
-      <a class="CoveoTab" data-id="All" data-caption="All Content" data-enable-duplicate-filtering="true" data-icon="coveo-sprites-salesforce-standard-drafts"></a>
+      <a class="CoveoTab" data-id="All" data-caption="All Content" data-enable-duplicate-filtering="false" data-icon="coveo-sprites-salesforce-standard-drafts"></a>
       <a class="CoveoTab" data-id="Web" data-caption="Web" data-enable-duplicate-filtering="true" data-icon="coveo-sprites-salesforce-standard-drafts" data-expression="@source==(Web)"></a>
-      <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="true" data-expression="@source==(Community, Knowledgebase, KB, Docs, Documentation, Ideas, Labs)"></a>
-      <a class="CoveoTab" data-id="Labs" data-caption="Labs" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="true" data-expression="@source==(Labs)"></a>
+      <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="false" data-expression="@source==(Community, Knowledgebase, KB, Docs, Documentation, Ideas, Labs)"></a>
+      <a class="CoveoTab" data-id="Labs" data-caption="Labs" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="false" data-expression="@source==(Labs)"></a>
       <a class="CoveoTab" data-id="Blogs" data-caption="Blogs" data-icon="coveo-sprites-salesforce-standard-note" data-endpoint="default" data-expression="@source==(Blogs)"></a>
       <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-icon="coveo-sprites-salesforce-standard-scan-card" data-expression="@source==(YouTube)"></a>
     </div>
@@ -48,7 +49,6 @@
         <div class="CoveoFacet" data-title="Document Type" data-field="@documenttype" data-tab="Support, Labs"></div>
         <div class="CoveoFacet" data-title="Year" data-field="@year" data-tab="Support"></div>
         <div class="CoveoFacet" data-title="Month" data-field="@month" data-tab="Support"></div>
-        <div class="CoveoFacet" data-title="Collection" data-field="@collection"></div>
       </div>
       <div class="coveo-results-column">
         <div class="CoveoShareQuery"></div>
@@ -75,7 +75,7 @@
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport"></div>
         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll='true'>
-          <script id='vdTemplate' class='result-template' type='text/html'>
+          <script id='vdTemplate' class='result-template' type='text/underscore'>
             <div class="coveo-result-frame">
               <div class="coveo-result-cell">
                 <div class="coveo-result-row">
@@ -99,18 +99,8 @@
                     </table>
                   </div>
                   <div class="coveo-result-cell">
-                    <div class='CoveoQuickview' data-template-id='myContentTemplateId'>
-                        <span>Quick view</span>
-                        <script class='result-template' type='text/html' id='myContentTemplateId'>
-                          <div>
-                            <span>This content will be displayed when then end user opens the quickview modal box. It could also include other Coveo component, and use core helpers.</span>
-                            <table class="CoveoFieldTable">
-                              <tr data-field="@liboardshorttitle" data-caption="Board" />
-                              <tr data-field="@licategoryshorttitle" data-caption="Category" />
-                              <tr data-field="@sysauthor" data-caption="Author" />
-                            </table>
-                          </div>
-                        </script>
+                    <div class='CoveoQuickview'>
+                      <span>Quick view</span>
                     </div>
                   </div>
                 </div>

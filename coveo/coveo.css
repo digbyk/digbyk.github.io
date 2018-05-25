@@ -27,6 +27,21 @@
 .CoveoSearchButton {
   background-color: white;
 }
+.CoveoResultList {
+  margin: 0;
+}
+.coveo-list-layout.CoveoResult {
+  padding: 0.5rem;
+}
+.coveo-result-row {
+  margin: 0.5rem 0 !important;
+}
+.CoveoResultLink {
+  font-weight: bold;
+}
+.magic-box .magic-box-input input {
+  font-size: 28px;
+}
 a, a:hover {
   color: #0090dd;
 }
