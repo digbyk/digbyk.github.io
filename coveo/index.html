@@ -27,8 +27,7 @@
     </div>
     <div class="SearchWidget">
       <div class='coveo-search-section'>
-        <div class="CoveoSettings"></div>
-        <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
+        <div class="CoveoSearchbox"></div>
       </div>
     </div>
     <div class="coveo-tab-section">
@@ -74,7 +73,7 @@
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport"></div>
         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll='true'>
-          <script id='vdTemplate' class='result-template' type='text/underscore' data-condition='raw.documenttype=="Virus Definition"'>
+          <script id='vdTemplate' class='result-template' type='text/html' data-condition='raw.documenttype=="Virus Definition"'>
             <div class="coveo-result-frame">
               <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
                 <span class="CoveoIcon coveo-icon coveo-small filetype file" data-small="true" data-text="false" data-with-label="false"></span>
