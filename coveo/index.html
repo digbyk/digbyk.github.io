@@ -90,10 +90,16 @@
               <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
                 <div class="coveo-result-row">
                   <div class="coveo-result-cell">
-                    <div class="CoveoQuickview">
-                      <em class="CoveoFieldValue" data-field="@title"></em>
-                      <!--a class="CoveoResultLink"></a-->
-                    </div>
+                      <div class="CoveoQuickView" data-title='<%= Title %>' data-fixed="true" data-width="70%" data-heigth="70%">
+                          <div class='header'>
+                              <table class="CoveoFieldTable">
+                                  <tr data-field="@liboardshorttitle" data-caption="Board" />
+                                  <tr data-field="@licategoryshorttitle" data-caption="Category" />
+                                  <tr data-field="@sysauthor" data-caption="Author" />
+                              </table>
+                          </div>
+                          <div class='CoveoQuickViewDocument'></div>
+                      </div>
                   </div>
                 </div>
                 <div class="coveo-result-row">
