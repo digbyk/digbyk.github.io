@@ -12,6 +12,7 @@
   background-image: url('https://www.sophos.com/medialibrary/SophosNext/Images/Support/Search%20Widget/header-bg.png');
   background-size: cover;
   background-color: #053175;
+  background-position-y: center;
   color: white;
   padding: 1em;
 }
