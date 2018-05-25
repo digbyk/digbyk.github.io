@@ -92,7 +92,13 @@
                   <div class="coveo-result-cell">
                     <div class="CoveoQuickview">
                       <span class="CoveoFieldValue" data-field="@title"></span>
-                      <!--a class="CoveoResultLink"></a-->
+                        <table class="CoveoFieldTable">
+                          <tbody>
+                            <tr data-field="@data" data-caption="Data"></tr>
+                            <tr data-field="@sha1" data-caption="SHA1"></tr>
+                            <tr data-field="@md5" data-caption="MD5"></tr>
+                          </tbody>
+                        </table>
                     </div>
                   </div>
                 </div>
