@@ -75,7 +75,7 @@
         <div class="CoveoErrorReport"></div>
         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll='true'>
           <script id='vdTenmplate' class='result-template' type='text/underscore' data-condition='raw.documenttype=="Virus Definition"'>
-            <div class="coveo-result-frame">
+            <div class="coveo-result-frame" data-always-show="true" data-template-id="accountQuickview">
               <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
                 <span class="CoveoIcon coveo-icon coveo-small filetype file" data-small="true" data-text="false" data-with-label="false"></span>
                 <div class="CoveoQuickview">
@@ -117,6 +117,28 @@
                     </table>
                   </div>
                 </div>
+              </div>
+            </div>
+          </script>
+          <script id="vdQuickview" type="text/html" class="result-template">
+            <div class="coveo-result-frame">
+              <div class="coveo-result-row">
+                <span class="CoveoFieldValue" data-field="@data"></span>
+              </div>
+              <div class="coveo-result-row">
+                <span class="CoveoFieldValue" data-field="@md5"></span>
+              </div>
+              <div class="coveo-result-row">
+                <span class="CoveoFieldValue" data-field="@sfdescription"></span>
+              </div>
+              <div class="coveo-result-row">
+                <span class="CoveoFieldValue" data-field="@sfannualrevenue" data-helper="currency"></span>
+              </div>
+              <div class="coveo-result-row">
+                <span class="CoveoFieldValue" data-field="@sfaccountnumber"></span>
+              </div>
+              <div class="coveo-result-row">
+                <span class="CoveoFieldValue" data-field="@sfcreateddate" data-helper="date"></span>
               </div>
             </div>
           </script>
