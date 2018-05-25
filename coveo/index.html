@@ -4,10 +4,10 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, height=device-height" >
     <title>Sophos Coveo Test Interface</title>
-    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearchNewDesign.css" />
     <link rel="stylesheet" href="coveo.css" type="text/css">
     <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
-    <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templates.js"></script>
+    <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templatesNew.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var root = document.body;
@@ -75,7 +75,7 @@
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport"></div>
         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll='true'>
-          <script id='vdTemplate' class='result-template' type='text/underscore'>
+          <script id='vdTemplate' class='result-template' type='text/html'>
             <div class="coveo-result-frame">
               <div class="coveo-result-cell">
                 <div class="coveo-result-row">
