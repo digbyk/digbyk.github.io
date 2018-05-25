@@ -9,7 +9,7 @@
   margin: 0px auto;
 }
 .SearchWidget {
-  background-image: ('https://www.sophos.com/medialibrary/SophosNext/Images/Support/Search%20Widget/header-bg.png');
+  background-image: url('https://www.sophos.com/medialibrary/SophosNext/Images/Support/Search%20Widget/header-bg.png');
   background-size: cover;
   background-color: #053175;
   color: white;
