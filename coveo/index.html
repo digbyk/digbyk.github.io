@@ -1,1 +1,127 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, height=device-height" >
+    <title>Sophos Coveo Test Interface</title>
+    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" href="coveo.css" type="text/css">
+    <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
+    <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templates.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var root = document.body;
+      Coveo.SearchEndpoint.endpoints['default'] = new Coveo.SearchEndpoint({
+        restUri: 'https://platform.cloud.coveo.com/rest/search',
+        accessToken: 'xx93b74850-100e-46f4-a3c3-f68fa1276deb'
+      });
+      Coveo.init(root);
+    })
+  </script>
+  </head>
+  <body id="search" class='CoveoSearchInterface' data-enable-history="true" data-pipeline="Marketing" data-enable-search-as-you-type="false" data-enable-reveal-query-suggest-addon="true" data-enable-query-syntax="true" data-enable-field-addon="true">
+    <div class="SearchNav">
+      <div class="SearchNavInner">
+        <img src="https://www.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png?h=18&la=en&w=102&hash=C08035F311988437F825017DEA39C7209A8518EF"/>
+      </div>
+    </div>
+    <div class="SearchWidget">
+      <div class='coveo-search-section'>
+        <div class="CoveoSettings"></div>
+        <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
+      </div>
+    </div>
+    <div class="coveo-tab-section">
+      <a class="CoveoTab" data-id="All" data-caption="All Content" data-enable-duplicate-filtering="true" data-icon="coveo-sprites-salesforce-standard-drafts"></a>
+      <a class="CoveoTab" data-id="Web" data-caption="Web" data-enable-duplicate-filtering="true" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-drafts" data-expression="@source==(Web)"></a>
+      <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="true" data-expression="@source==(Community, KB, Ideas, Labs)"></a>
+      <a class="CoveoTab" data-id="Labs" data-caption="Labs" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed" data-endpoint="default" data-enable-duplicate-filtering="true" data-expression="@source==(Labs)"></a>
+      <a class="CoveoTab" data-id="Blogs" data-caption="Blogs" data-icon="coveo-sprites-salesforce-standard-note" data-endpoint="default" data-expression="@source==(Blogs)"></a>
+      <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-icon="coveo-sprites-salesforce-standard-scan-card" data-expression="@source==(YouTube)"></a>
+      <a class="CoveoTab" data-id="Twitter" data-caption="Twitter" data-icon="coveo-sprites-salesforce-standard-scan-card" data-expression="@source==(Twitter)"></a>
+    </div>
+    <div class="coveo-main-section">
+      <div class="coveo-facet-column">
+        <div class="CoveoFacet" data-title="Source" data-field="@source" data-number-of-values="6" data-custom-sort="Web, Community, Blogs, KB, Ideas"></div>
+        <div class="CoveoFacet" data-title="Language" data-field="@language" data-custom-sort="english, french, german, spanish, italian, portuguese, chinese, japanese, danish" data-number-of-values="10" data-allowed-values="english, french, spanish, japanese, chinese"></div>
+        <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="Support, Videos"></div>
+        <div class="CoveoFacet" data-title="Document Type" data-field="@documenttype" data-tab="Support, Labs"></div>
+        <div class="CoveoFacet" data-title="Year" data-field="@year" data-tab="Support"></div>
+        <div class="CoveoFacet" data-title="Month" data-field="@month" data-tab="Support"></div>
+      </div>
+      <div class="coveo-results-column">
+        <div class="CoveoShareQuery"></div>
+        <div class="CoveoExportToExcel"></div>
+        <div class="CoveoPreferencesPanel">
+          <div class="CoveoResultsPreferences"></div>
+          <div class="CoveoResultsFiltersPreferences"></div>
+        </div>
+        <div class="CoveoBreadcrumb"></div>
+        <div class="coveo-results-header">
+          <div class="coveo-summary-section">
+            <span class="CoveoQuerySummary"></span>
+            <span class="CoveoQueryDuration"></span>
+          </div>
+          <div class="coveo-result-layout-section">
+            <span class="CoveoResultLayout"></span>
+          </div>
+          <div class="coveo-sort-section">
+            <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance"></span>
+            <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date"></span>
+          </div>
+        </div>
+        <div class="CoveoHiddenQuery"></div>
+        <div class="CoveoDidYouMean"></div>
+        <div class="CoveoErrorReport"></div>
+        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll='true'>
+          <script id='myFirstResultTemplate' class='result-template' type='text/underscore' data-condition='raw.documenttype=="Virus Definition"'>
+            <div class="coveo-result-frame">
+              <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
+                <span class="CoveoIcon coveo-icon coveo-small filetype file" data-small="true" data-text="false" data-with-label="false"></span>
+                <div class="CoveoQuickview">
+                  <div>
+                    <div class="coveo-icon-for-quickview">
+                      <svg enable-background="new 0 0 20 12" viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" class="coveo-icon-for-quickview-svg"><g fill="currentColor"><path d="m10 4.3c-1 0-1.7.8-1.7 1.7 0 1 .8 1.7 1.7 1.7 1 0 1.7-.8 1.7-1.7 0-1-.7-1.7-1.7-1.7m0 4.7c-1.6 0-3-1.4-3-3s1.4-3 3-3 3 1.4 3 3-1.4 3-3 3"></path><path d="m19.8 6.4v-.001c.069-.117.109-.253.109-.399s-.04-.282-.109-.399v-.001c-.005-.008.005.007 0 0-2.203-3.473-5.917-5.6-9.8-5.6-3.884 0-7.655 2.091-9.8 5.602l0 0c-.069.117-.109.253-.109.398s.04.281.109.398c0 0-.001-.002 0 0 2.203 3.475 5.916 5.602 9.8 5.602 3.883 0 7.597-2.127 9.8-5.6.005-.007-.005.008 0 0zm-9.8 4.1c-3.236 0-6.28-1.635-8.189-4.339-.067-.095-.067-.228-.002-.324 1.908-2.797 4.953-4.337 8.191-4.337 3.235 0 6.278 1.634 8.187 4.337.068.096.068.231 0 .327-1.909 2.702-4.952 4.336-8.187 4.336z"></path></g></svg>
+                    </div>
+                    <div class="coveo-caption-for-icon">Quick View</div>
+                  </div>
+                </div>
+              </div>
+              <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
+                <div class="coveo-result-row">
+                  <div class="coveo-result-cell">
+                    <em class="CoveoFieldValue" data-field="@title"></em>
+                    <!--a class="CoveoResultLink"></a-->
+                  </div>
+                </div>
+                <div class="coveo-result-row">
+                  <div class="coveo-result-cell">
+                    <span class="CoveoExcerpt"></span>
+                  </div>
+                </div>
+                <div class="coveo-result-row">
+                  <div class="coveo-result-cell">
+                    <span class='coveo-icon-for-quickview'></span>
+                  </div>
+                </div>
+                <div class="coveo-result-row">
+                  <div class="coveo-result-cell">
+                    <table class="CoveoFieldTable">
+                      <tbody>
+                        <tr data-field="@sha1" data-caption="SHA1"></tr>
+                        <tr data-field="@md5" data-caption="MD5"></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </script>
+        </div>
+        <div class="CoveoPager"></div>
+        <div class="CoveoLogo"></div>
+        <div class="CoveoResultsPerPage"></div>
+      </div>
+    </div>
+  </body>
+</html>
