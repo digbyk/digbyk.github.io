@@ -85,36 +85,26 @@
       <div class="CoveoDidYouMean"></div>
       <div class="CoveoErrorReport"></div>
       <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll='true'>
-          <script type='text/html' id='baseTemplate' class='result-template' data-field-source="Labs">
+          <script type='text/html' id='baseTemplate' class='result-template' data-field-documenttype="Virus Definition">
             <div class="coveo-result-frame">
               <div class="coveo-result-cell">
                 <div class="coveo-result-row">
                   <div class="coveo-result-cell">
                     <span class="CoveoQuickview">
-                      <span class="CoveoFieldValue" data-field="@title"></span>
+                      <span class="CoveoFieldValue" data-field="@name"></span>
                     </span>
-                    
-                  </div>
-                </div>
-                <div class="coveo-result-row">
-                  <div class="coveo-result-cell">
-                    <span class="CoveoExcerpt"></span>
                   </div>
                 </div>
                 <div class="coveo-result-row">
                   <div class="coveo-result-cell">
                       <table class="CoveoFieldTable">
                         <tbody>
-                          <tr data-field="@source" data-caption="Source"></tr>
-                              <tr data-field="@sha1" data-caption="SHA1"></tr>
+                          <tr data-field="@name" data-caption="Name"></tr>
+                          <tr data-field="@date" data-caption="Date" data-helper='dateTime'></tr>
+                          <tr data-field="@sha1" data-caption="SHA1"></tr>
                               <tr data-field="@md5" data-caption="MD5"></tr>
                             </tbody>
                       </table>
-                  </div>
-                  <div class="coveo-result-cell">
-                    <div class='CoveoQuickview'>
-                      <span>Quick view</span>
-                    </div>
                   </div>
                 </div>
               </div>
