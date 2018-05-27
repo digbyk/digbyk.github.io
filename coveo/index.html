@@ -57,6 +57,7 @@
         data-number-of-values="10" data-allowed-values="english, french, spanish, japanese, chinese"></div>
       <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="Support, Videos"></div>
       <div class="CoveoFacet" data-title="Document Type" data-field="@documenttype" data-tab="Support, Labs"></div>
+      <div class="CoveoFacet" data-title="File Type" data-field="@filetype" data-tab="Support, Labs"></div>
       <div class="CoveoFacet" data-title="Year" data-field="@year" data-tab="Support"></div>
       <div class="CoveoFacet" data-title="Month" data-field="@month" data-tab="Support"></div>
     </div>
@@ -85,6 +86,7 @@
       <div class="CoveoDidYouMean"></div>
       <div class="CoveoErrorReport"></div>
       <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll='true'>
+          <!-- Template for @DocumentType="Virus definition" -->
           <script type='text/html' id='baseTemplate' class='result-template' data-field-documenttype="Virus Definition">
             <div class="coveo-result-frame">
               <div class="coveo-result-cell">
@@ -102,14 +104,15 @@
                           <tr data-field="@name" data-caption="Name"></tr>
                           <tr data-field="@date" data-caption="Date" data-helper='dateTime'></tr>
                           <tr data-field="@sha1" data-caption="SHA1"></tr>
-                              <tr data-field="@md5" data-caption="MD5"></tr>
-                            </tbody>
+                          <tr data-field="@md5" data-caption="MD5"></tr>
+                        </tbody>
                       </table>
                   </div>
                 </div>
               </div>
             </div>
           </script>
+          <!-- Default template -->
           <script type='text/html' id='baseTemplate' class='result-template'>
             <div class="coveo-result-frame">
               <div class="coveo-result-cell">
@@ -125,10 +128,6 @@
                 </div>
                 <div class="coveo-result-row">
                   <div class="coveo-result-cell">
-                      <table class="CoveoFieldTable">
-                      </table>
-                  </div>
-                  <div class="coveo-result-cell">
                     <div class='CoveoQuickview'>
                       <span>Quick view</span>
                     </div>
@@ -139,7 +138,6 @@
           </script>
         </div>
       <div class="CoveoPager"></div>
-      <div class="CoveoLogo"></div>
       <div class="CoveoResultsPerPage"></div>
     </div>
   </div>
