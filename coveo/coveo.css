@@ -51,3 +51,7 @@
 a, a:hover {
   color: #0090dd;
 }
+::placeholder {
+  color: #666;
+  opacity: 0.5; /* Firefox */
+}
