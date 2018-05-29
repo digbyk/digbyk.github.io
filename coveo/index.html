@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, height=device-height">
   <title>Sophos Coveo Test Interface</title>
-  <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearchNewDesign.css" />
+  <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearch.css" />
   <link rel="stylesheet" href="coveo.css" type="text/css">
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templatesNew.js"></script>
@@ -21,14 +21,13 @@
   </script>
 </head>
 
-<body id="search" class='CoveoSearchInterface' data-enable-history="true" data-pipeline="Marketing" data-enable-omnibox="true"
+<body id="search" class='CoveoSearchInterface' data-enable-history="true" data-enable-omnibox="true"
   data-enable-field-addon="true" data-enable-query-extension-addon="true" data-enable-wildcards="true" data-enable-lowercase-operators="true"
   data-enable-partial-match="true" data-trigger-query-on-clear="false">
   <div class="CoveoAnalytics"></div>
   <div class="SearchNav">
     <div class="SearchNavInner">
-      <img src="https://www.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png?h=18&la=en&w=102&hash=C08035F311988437F825017DEA39C7209A8518EF"
-      />
+      <img src="https://www.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png?h=18&amp;la=en&amp;w=102&amp;hash=C08035F311988437F825017DEA39C7209A8518EF"/>
     </div>
   </div>
   <div class="SearchWidget">
@@ -40,15 +39,15 @@
   </div>
   <div class="coveo-tab-section">
     <a class="CoveoTab" data-id="All" data-caption="All Content" data-enable-duplicate-filtering="false" data-icon="coveo-sprites-salesforce-standard-drafts"></a>
-    <a class="CoveoTab" data-id="Web" data-caption="Web" data-enable-duplicate-filtering="true" data-icon="coveo-sprites-salesforce-standard-drafts"
-      data-expression="@source==(Web)"></a>
+    <a class="CoveoTab" data-id="Products" data-caption="Products" data-pipeline="Marketing" data-enable-duplicate-filtering="true" data-icon="coveo-sprites-salesforce-standard-drafts"
+      data-expression="@source=Web and @uri='\/..-..\/products\/'"></a>
     <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed"
       data-endpoint="default" data-enable-duplicate-filtering="false" data-expression="@source==(Community, Knowledgebase, KB, Docs, Documentation, Ideas, Labs)"></a>
     <a class="CoveoTab" data-id="Labs" data-caption="Labs" data-pipeline="Support" data-icon="coveo-sprites-salesforce-standard-question-feed"
       data-endpoint="default" data-enable-duplicate-filtering="false" data-expression="@source==(Labs)"></a>
-    <a class="CoveoTab" data-id="Blogs" data-caption="Blogs" data-icon="coveo-sprites-salesforce-standard-note" data-endpoint="default"
+    <a class="CoveoTab" data-id="Blogs" data-caption="Blogs" data-pipeline="Marketing" data-icon="coveo-sprites-salesforce-standard-note" data-endpoint="default"
       data-expression="@source==(Blogs)"></a>
-    <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-icon="coveo-sprites-salesforce-standard-scan-card" data-expression="@source==(YouTube)"></a>
+    <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-pipeline="Marketing" data-icon="coveo-sprites-salesforce-standard-scan-card" data-expression="@source==(YouTube)"></a>
   </div>
   <div class="coveo-main-section">
     <div class="coveo-facet-column">
@@ -97,6 +96,11 @@
                     </span>
                   </div>
                 </div>
+                <div class="coveo-result-row">
+                  <div class="coveo-result-cell">
+                    <span class="CoveoExcerpt"></span>
+                  </div>
+                </div>  
                 <div class="coveo-result-row">
                   <div class="coveo-result-cell">
                       <table class="CoveoFieldTable">
