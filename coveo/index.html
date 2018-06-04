@@ -24,14 +24,15 @@
 <body id="search" class='CoveoSearchInterface' data-enable-history="true" data-enable-omnibox="true" data-enable-field-addon="true"
   data-enable-query-extension-addon="true" data-enable-wildcards="true" data-enable-lowercase-operators="true" data-enable-partial-match="true"
   data-trigger-query-on-clear="false">
-  <div class="CoveoAnalytics"></div>
-  <div class="SearchNav">
-    <div class="SearchNavInner">
-      <img src="https://www.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png?h=18&amp;la=en&amp;w=102&amp;hash=C08035F311988437F825017DEA39C7209A8518EF"
-      />
+  <header>
+    <div class="SearchNav">
+      <div class="SearchNavInner">
+        <img src="https://www.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png?h=18&amp;la=en&amp;w=102&amp;hash=C08035F311988437F825017DEA39C7209A8518EF"
+        />
+      </div>
     </div>
-  </div>
-  <div class="coveo-tab-section">
+  </header>
+  <nav class="coveo-tab-section">
     <a class="CoveoTab" data-id="All" data-caption="All Content" data-enable-duplicate-filtering="false" data-icon="coveo-sprites-salesforce-standard-drafts"></a>
     <a class="CoveoTab" data-id="Products" data-caption="Products" data-pipeline="Marketing" data-enable-duplicate-filtering="true"
       data-icon="coveo-sprites-salesforce-standard-drafts" data-expression="@source=Web and @uri='\/..-..\/products\/'"></a>
@@ -41,17 +42,21 @@
       data-endpoint="default" data-enable-duplicate-filtering="false" data-expression="@source==(Labs)"></a>
     <a class="CoveoTab" data-id="Blogs" data-caption="Blogs" data-pipeline="Marketing" data-icon="coveo-sprites-salesforce-standard-note"
       data-endpoint="default" data-expression="@source==(Blogs)"></a>
-    <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-pipeline="Marketing" data-icon="coveo-sprites-salesforce-standard-scan-card"
+      <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-pipeline="Marketing"
       data-expression="@source==(YouTube)"></a>
-  </div>
-  <div class="SearchWidget">
-    <div class='coveo-search-section'>
-      <div class="CoveoSearchbox">
-        <div class="CoveoFieldSuggestions" data-field="@title"></div>
+      <a class="CoveoTab" data-id="Corporate" data-caption="Corporate" data-pipeline="Corporate"
+      data-expression=""></a>
+  </nav>
+  <section>
+    <div class="CoveoAnalytics"></div>
+    <div class="SearchWidget">
+      <div class='coveo-search-section'>
+        <div class="CoveoSearchbox">
+          <div class="CoveoFieldSuggestions" data-field="@title"></div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="coveo-main-section">
+  </section>
+  <section class="coveo-main-section">
     <div class="coveo-facet-column">
       <div class="CoveoFacet" data-title="Source" data-field="@source" data-number-of-values="10" data-custom-sort="Web, Community, Blogs, KB, Ideas"></div>
       <div class="CoveoFacet" data-title="Language" data-field="@language" data-custom-sort="english, french, german, spanish, italian, portuguese, chinese, japanese, danish"
@@ -146,17 +151,19 @@
       <div class="CoveoPager"></div>
       <div class="CoveoResultsPerPage"></div>
     </div>
-  </div>
-  <div class="cantfind" data-tab="Support">
-    <div>
-      <h1>Can't find what you're looking for?</h1>
-      <ul>
+  </section>
+  <section>
+    <div class="cantfind" data-tab="Support">
+      <div>
+        <h1>Can't find what you're looking for?</h1>
+        <ul>
           <li>Open a Support Case</li>
           <li>Chat With Us</li>
           <li>Twitter Support</li>
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
   <footer>
 
   </footer>
