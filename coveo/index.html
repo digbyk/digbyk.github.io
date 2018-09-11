@@ -21,24 +21,24 @@
   </script>
 </head>
 
-<body id="search" class='CoveoSearchInterface' data-enable-history="true" data-enable-omnibox="true" data-enable-field-addon="true"
-  data-enable-query-extension-addon="true" data-enable-wildcards="true" data-enable-lowercase-operators="true" data-enable-partial-match="true"
-  data-trigger-query-on-clear="false">
+<body id="search" class='CoveoSearchInterface' data-enable-history="true" data-enable-omnibox="true"
+  data-enable-field-addon="true" data-enable-query-extension-addon="true" data-enable-wildcards="true"
+  data-enable-lowercase-operators="true" data-enable-partial-match="true" data-trigger-query-on-clear="false">
   <header>
     <div class="SearchNav">
       <div class="SearchNavInner">
-        <img src="https://www.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png?h=18&amp;la=en&amp;w=102&amp;hash=C08035F311988437F825017DEA39C7209A8518EF"
-        />
+        <img src="https://www.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png?h=18&amp;la=en&amp;w=102&amp;hash=C08035F311988437F825017DEA39C7209A8518EF" />
       </div>
     </div>
   </header>
   <nav class="coveo-tab-section">
     <a class="CoveoTab" data-id="All" data-caption="All Content" data-enable-duplicate-filtering="false"></a>
-    <a class="CoveoTab" data-id="Products" data-caption="Products" data-pipeline="Marketing" data-enable-duplicate-filtering="true"
-      data-expression="@source='Main Site' and @uri='\/..-..\/products\/'"></a>
-    <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support" data-enable-duplicate-filtering="false"
-      xdata-expression="@source==(Community, Knowledgebase, KB, Docs, Documentation, Ideas, Labs)"></a>
-    <a class="CoveoTab" data-id="Labs" data-caption="Labs" data-pipeline="Support" data-enable-duplicate-filtering="false" data-expression="@source==(Labs, Malware)"></a>
+    <a class="CoveoTab" data-id="Products" data-caption="Products" data-pipeline="Marketing"
+      data-enable-duplicate-filtering="true" data-expression="@source='Main Site' and @uri='\/..-..\/products\/'"></a>
+    <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support"
+      data-enable-duplicate-filtering="false" xdata-expression="@source==(Community, Knowledgebase, KB, Docs, Documentation, Ideas, Labs)"></a>
+    <a class="CoveoTab" data-id="Labs" data-caption="Labs" data-pipeline="Support" data-enable-duplicate-filtering="false"
+      data-expression="@source==(Labs, Malware)"></a>
     <a class="CoveoTab" data-id="Blogs" data-caption="Blogs" data-expression="@source==(NakedSecurity, News)"></a>
     <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-expression="@source==(YouTube)"></a>
     <a class="CoveoTab" data-id="Corporate" data-caption="Corporate" data-pipeline="Corporate" data-expression=""></a>
@@ -56,6 +56,7 @@
     <section class="coveo-main-section">
       <div class="coveo-facet-column">
         <div class="CoveoFacet" data-title="Source" data-field="@source" data-number-of-values="10" data-custom-sort="Web, Community, Blogs, KB, Ideas"></div>
+        <div class="CoveoFacet" data-title="Type" data-field="@type" data-number-of-values="10"></div>
         <div class="CoveoFacet" data-title="Language" data-field="@language" data-custom-sort="english, french, german, spanish, italian, portuguese, chinese, japanese, danish"
           data-number-of-values="10" data-allowed-values="english, french, spanish, japanese, chinese"></div>
         <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="Support, Videos"></div>
@@ -88,7 +89,8 @@
         <div class="CoveoHiddenQuery"></div>
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport"></div>
-        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-enable-infinite-scroll='false'>
+        <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true"
+          data-enable-infinite-scroll='false'>
           <!-- Template for @DocumentType="Virus definition" -->
           <script type='text/html' id='baseTemplate' class='result-template' data-field-documenttype="Virus Definition">
             <div class="coveo-result-frame">
