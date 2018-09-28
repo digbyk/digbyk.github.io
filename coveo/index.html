@@ -16,6 +16,9 @@
         restUri: 'https://platform.cloud.coveo.com/rest/search',
         accessToken: 'xxc0743789-8066-4b9a-ba0e-8b9b137da051'
       });
+      Coveo.$$(root).on("afterInitialization", function () {
+        Coveo.state(root, "hq", "(@language==French)");
+      });
       Coveo.init(root);
     })
   </script>
