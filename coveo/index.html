@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="coveo.css" type="text/css">
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templatesNew.js"></script>
+  <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/cultures/sde.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var root = document.body;
@@ -17,7 +18,7 @@
         accessToken: 'xxc0743789-8066-4b9a-ba0e-8b9b137da051'
       });
       Coveo.$$(root).on("afterInitialization", function () {
-        Coveo.state(root, "hq", "(@language==French)");
+        //Coveo.state(root, "hq", "(@Language==German)");
       });
       Coveo.init(root);
     })
@@ -35,23 +36,17 @@
     </div>
   </header>
   <nav class="coveo-tab-section">
-    <a class="CoveoTab" data-id="All" data-caption="All Content" data-enable-duplicate-filtering="false"></a>
-    <a class="CoveoTab" data-id="Products" data-caption="Products" data-pipeline="Marketing"
-      data-enable-duplicate-filtering="true"></a>
+    <a class="CoveoTab" data-id="All" data-caption="All Content" data-pipeline="Marketing"
+      data-enable-duplicate-filtering="false"></a>
     <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support"
       data-enable-duplicate-filtering="false" xdata-expression="@source==(Community, Knowledgebase, KB, Docs, Documentation, Ideas, Labs)"></a>
-    <a class="CoveoTab" data-id="Labs" data-caption="Labs" data-pipeline="Support" data-enable-duplicate-filtering="false"
-      data-expression="@source==(Labs, Malware)"></a>
-    <a class="CoveoTab" data-id="Blogs" data-caption="Blogs" data-expression="@source==(NakedSecurity, News)"></a>
-    <a class="CoveoTab" data-id="Videos" data-caption="Videos" data-expression="@source==(YouTube)"></a>
-    <a class="CoveoTab" data-id="Corporate" data-caption="Corporate" data-pipeline="Corporate" data-expression=""></a>
   </nav>
   <main>
     <section>
       <div class="CoveoAnalytics"></div>
       <div class="SearchWidget">
         <div class='coveo-search-section'>
-          <div class="CoveoSearchbox">
+          <div class="CoveoSearchbox" data-enable-omnibox="true" data-enable-query-suggest-addon="true">
             <!--div class="CoveoFieldSuggestions" data-field="@title"></div-->
           </div>
         </div>
@@ -59,7 +54,7 @@
     <section class="coveo-main-section">
       <div class="coveo-facet-column">
         <div class="CoveoFacet" data-title="Source" data-field="@source" data-number-of-values="30"></div>
-        <div class="CoveoFacet" data-title="Type" data-field="@type" data-number-of-values="50" data-custom-sort="Community, Knowledge Base, Documentation"></div>
+        <div class="CoveoFacet" data-title="Type" data-field="@type" data-number-of-values="50" data-custom-sort="Web, Knowledge Base, Forums, Documentation"></div>
         <div class="CoveoFacet" data-title="Language" data-field="@language" data-custom-sort="english, french, german, spanish, italian, portuguese, chinese, japanese, danish"
           data-number-of-values="30"></div>
         <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="Support, Videos"></div>
