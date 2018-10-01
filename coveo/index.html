@@ -9,7 +9,12 @@
   <link rel="stylesheet" href="coveo.css" type="text/css">
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templatesNew.js"></script>
-  <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/cultures/sde.js"></script>
+  <script>
+    var language = window.navigator.userLanguage || window.navigator.language;
+    var url = "https://static.cloud.coveo.com/searchui/v2.3679/js/cultures/" + language + ".js";
+    var s = "<script src='" + url + "'><\/script>";
+    document.write(s);
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var root = document.body;
@@ -18,7 +23,6 @@
         accessToken: 'xxc0743789-8066-4b9a-ba0e-8b9b137da051'
       });
       Coveo.$$(root).on("afterInitialization", function () {
-        //Coveo.state(root, "hq", "(@Language==German)");
       });
       Coveo.init(root);
     })
