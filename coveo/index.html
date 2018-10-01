@@ -10,8 +10,8 @@
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templatesNew.js"></script>
   <script>
-    var language = window.navigator.userLanguage || window.navigator.language;
-    var url = "https://static.cloud.coveo.com/searchui/v2.3679/js/cultures/" + language + ".js";
+    var language = window.navigator.userLanguage || window.navigator.language || "en-US";
+    var url = "https://static.cloud.coveo.com/searchui/v2.3679/js/cultures/" + language.split("-")[0] + ".js";
     var s = "<script src='" + url + "'><\/script>";
     document.write(s);
   </script>
@@ -94,37 +94,6 @@
         <div class="CoveoErrorReport"></div>
         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true"
           data-enable-infinite-scroll='false'>
-          <!-- Template for @DocumentType="Virus definition" -->
-          <script type='text/html' id='baseTemplate' class='result-template' data-field-documenttype="Virus Definition">
-            <div class="coveo-result-frame">
-              <div class="coveo-result-cell">
-                <div class="coveo-result-row">
-                  <div class="coveo-result-cell">
-                    <span class="CoveoQuickview">
-                      <span class="CoveoFieldValue" data-field="@name"></span>
-                    </span>
-                  </div>
-                </div>
-                <div class="coveo-result-row">
-                  <div class="coveo-result-cell">
-                    <span class="CoveoExcerpt"></span>
-                  </div>
-                </div>  
-                <div class="coveo-result-row">
-                  <div class="coveo-result-cell">
-                      <table class="CoveoFieldTable">
-                        <tbody>
-                          <tr data-field="@name" data-caption="Name"></tr>
-                          <tr data-field="@date" data-caption="Date" data-helper='dateTime'></tr>
-                          <tr data-field="@sha1" data-caption="SHA1"></tr>
-                          <tr data-field="@md5" data-caption="MD5"></tr>
-                        </tbody>
-                      </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </script>
           <!-- Default template -->
           <script type='text/html' id='baseTemplate' class='result-template'>
             <div class="coveo-result-frame">
