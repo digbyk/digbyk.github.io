@@ -7,6 +7,7 @@
   <title>Sophos Coveo Test Interface</title>
   <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearch.css" />
   <link rel="stylesheet" href="coveo.css" type="text/css">
+  <link href="sophosfavicon.ico" rel="shortcut icon" type="image/x-icon" />
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
   <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templatesNew.js"></script>
   <script>
@@ -40,10 +41,10 @@
     </div>
   </header>
   <nav class="coveo-tab-section">
-    <a class="CoveoTab" data-id="All" data-caption="All Content" data-pipeline="Marketing"
+    <a class="CoveoTab" data-id="All" data-caption="AllContent" data-pipeline="Marketing"
       data-enable-duplicate-filtering="false"></a>
     <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support"
-      data-enable-duplicate-filtering="false" xdata-expression="@source==(Community, Knowledgebase, KB, Docs, Documentation, Ideas, Labs)"></a>
+      data-enable-duplicate-filtering="false"></a>
   </nav>
   <main>
     <section>
@@ -58,7 +59,8 @@
     <section class="coveo-main-section">
       <div class="coveo-facet-column">
         <div class="CoveoFacet" data-title="Source" data-field="@source" data-number-of-values="30"></div>
-        <div class="CoveoFacet" data-title="Type" data-field="@type" data-number-of-values="50" data-custom-sort="Web, Knowledge Base, Forums, Documentation"></div>
+        <div class="CoveoFacet" data-titlee="Type" data-caption="Collection" data-field="@type" data-number-of-values="50"
+          data-custom-sort="Web, Knowledge Base, Forums, Documentation"></div>
         <div class="CoveoFacet" data-title="Language" data-field="@language" data-custom-sort="english, french, german, spanish, italian, portuguese, chinese, japanese, danish"
           data-number-of-values="30"></div>
         <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="Support, Videos"></div>
