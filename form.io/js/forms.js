@@ -24,7 +24,7 @@ window.onload = function () {
                     // Clearbit integration
                     // if (event.changed && event.changed.component.key === 'email' && event.changed.value && event.changed.value.match(/.+\@.+\..+/g)) {
                     //     let headers = new Headers();
-                    //     headers.append('Authorization', 'Bearer sk_36e06412b0541f186157d5b03fa64689');
+                    //     headers.append('Authorization', 'Bearer xxxx');
                     //     fetch('https://person.clearbit.com/v2/combined/find?email=' + event.changed.value, {
                     //         headers: headers
                     //     })
