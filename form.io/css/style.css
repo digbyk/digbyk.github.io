@@ -1,0 +1,97 @@
+body {
+    display: grid;
+    grid-template-rows: 60px 60px 1fr 200px;
+    height: 100vh;
+    font-family: SophosSans-Light,arial,helvetica,sans-serif;
+    margin: 0;
+}
+header {
+    height: 60px;
+    background-color: #055bb5;
+    margin: 0 auto;
+    background-image: url(https://secure2.sophos.com/en-us/medialibrary/Images/Navigation/sophos-logo-white.png);
+    background-position: 0 20px;
+    background-repeat: no-repeat;
+    justify-content: center;
+    width: 1000px;
+    display: grid;
+    justify-content: right;
+    align-content: center;
+}
+header:before {
+    content:"";
+    background-color:#055bb5;
+    position: absolute;
+    height: 60px;
+    width: 200vw;
+    left: -100vw;
+    z-index: -1;
+}
+header > nav >  ul {
+    margin: 0px;
+    list-style-type: none;
+    font-size: 14px;
+    font-family: SophosSans-Medium, Arial;
+}
+header > nav >  ul li {
+    display: inline;
+    padding: 10px;
+    margin-left: 23px;
+}
+header > nav > ul li a, header > nav >  ul li a:visited {
+    color: #99cae8;
+    text-transform: uppercase;
+}
+header > nav > ul li a:hover {
+    color: white;
+    text-decoration: none;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    justify-content: center;
+    width: 1000px;
+}
+main.landingpage {
+    grid-template-columns: 2fr 2fr;
+}
+article {
+    align-self: start;
+    margin-top: 1rem;
+}
+aside.form {
+    position: relative;
+    top: -5rem;
+    align-self: start;
+    margin: 1rem;
+    background-color: #e5f3fe;
+    border-radius: 6px;
+    box-shadow: 1px 1px 8px 2px #ccc;
+}
+.sophosform {
+    margin: 2rem;
+}
+footer {
+    height: 200px;
+    background-color: #f0f2f3;
+}
+.interceptx {
+    grid-column: 1 / span 2; 
+    background-color: #055bb5;
+    height: 260px;
+    padding-left: 360px;
+    color: white;
+    background-image: url(https://www.sophos.com/en-us/medialibrary/SophosNext/Images/Products/Icons/icon-intercept-large.svg); 
+    background-repeat: no-repeat; 
+    background-position: left 30px; background-size: 26%;
+}
+.interceptx:before {
+    content:"";
+    background-color:#055bb5;
+    position: absolute;
+    height: 260px;
+    width: 200vw;
+    left: -100vw;
+    z-index: -1;
+}
