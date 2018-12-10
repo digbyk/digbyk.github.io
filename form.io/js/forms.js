@@ -4,22 +4,49 @@ window.onload = function () {
         //console.info('Creating form for ' + htmlForm.dataset.formid);
         Formio.createForm(document.getElementsByClassName('sophosform')[0], 'https://fbhnfygzyfwuxxv.form.io/' + htmlForm.dataset.formid)
             .then(function (form) {
-                var k = form._form.properties.demandbaseKey;
-                fetch('http://ip-api.com/json/')
-                    .then(function (response) {
-                        return response.json();
-                    })
-                    .then(function (json) {
-                        form.submission = {
-                            data: {
-                                formType: htmlForm.dataset.formtype,
-                                product: htmlForm.dataset.product,
-                                countryCode: json.countryCode,
-                                country: json.country,
-                                geoCheckStatus: "true"
-                            }
-                        };
-                    });
+                var data = {
+                    formType: htmlForm.dataset.formtype,
+                    product: htmlForm.dataset.product
+                };
+                form.submission = {
+                    data: data
+                };
+                if (form._form.properties.lookupService == 'Demandbase') {
+                    var url = `https://api.company-target.com/api/v2/ip.json?key=${form._form.properties.demandbaseKey}&page=${document.location.href}&page_title=${document.title}&referrer=${document.referrer}`;
+                    fetch(url)
+                        .then(function (response) {
+                            return response.json();
+                        })
+                        .then(function (json) {
+                            console.log(json);
+                            data.countryCode = json.country ? json.country : json.registry_country_code;
+                            data.country = json.country_name ? json.country_name : json.registry_country;
+                            data.geoCheckStatus = 'true';
+                            data.company = json.marketing_alias;
+                            data.industry = json.industry;
+                            data.companySize = json.employee_count;
+                            data.companyCheckStatus = json.information_level == 'Detailed' ? 'true' : 'false';
+                            form.submission = {
+                                data: data
+                            };
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                }
+                // fetch('http://ip-api.com/json/')
+                //     .then(function (response) {
+                //         return response.json();
+                //     })
+                //     .then(function (json) {
+                //         form.submission = {
+                //             data: {
+                //                 countryCode: json.countryCode,
+                //                 country: json.country,
+                //                 geoCheckStatus: "true"
+                //             }
+                //         };
+                //     });
                 form.on('change', function (event) {
                     // Demandbase integration
                     if (event.changed && event.changed.component.key === 'email' && event.changed.value && event.changed.value.match(/.+\@.+\..+/g)) {
@@ -31,12 +58,12 @@ window.onload = function () {
                             .then(function (json) {
                                 console.log(json);
                                 var submission = { data: event.data };
-                                // submission.data.firstName = json.person.name.givenName;
-                                // submission.data.lastName = json.person.name.familyName;
-                                // submission.data.jobRole = json.person.employment.title;
-                                // submission.data.company = json.company.name;
-                                // submission.data.industry = json.company.category.sector;
-                                // submission.data.companySize = json.company.metrics.employeesRange;
+                                //submission.data.firstName = json.person.name.givenName;
+                                //submission.data.lastName = json.person.name.familyName;
+                                //submission.data.jobRole = json.person.employment.title;
+                                submission.data.company = json.marketing_alias;
+                                submission.data.industry = json.industry;
+                                submission.data.companySize = json.employee_count;
                                 form.submission = submission;
                             })
                             .catch(function (error) {
