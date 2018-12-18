@@ -1,7 +1,12 @@
 window.onload = function () {
     Coveo.SearchEndpoint.endpoints['default'] = new Coveo.SearchEndpoint({
         restUri: 'https://platform.cloud.coveo.com/rest/search',
-        accessToken: 'xxc0743789-8066-4b9a-ba0e-8b9b137da051'
+        accessToken: 'xxc0743789-8066-4b9a-ba0e-8b9b137da051',
+        queryStringArguments: {
+            debug: 1,
+            workgroup: 'myworkgroup',
+            pipeline: 'Support'
+        }
     });
     var root = document.querySelector('#results');
     Coveo.init(root);
@@ -15,15 +20,8 @@ window.onload = function () {
         args.queryBuilder.advancedExpression.addFieldExpression('@sophossourcetype', '==', ['Knowledge Base']);
     })
     let typingTimer;
-    const typingTimerInterval = 300;
-    var buttonElement = document.querySelector('#button');
+    const typingTimerInterval = 600;
     var textarea = document.querySelector("textarea[name='data[description]']");
-    buttonElement.addEventListener('click', function () {
-        clearTimeout(typingTimer);
-        typingTimer = setTimeout(() => {
-            Coveo.executeQuery(root);
-        }, typingTimerInterval);
-    });
     var htmlForms = Array.from(document.getElementsByClassName('sophosform'));
     htmlForms.forEach(function (htmlForm) {
         //console.info('Creating form for ' + htmlForm.dataset.formid);
@@ -38,6 +36,12 @@ window.onload = function () {
             form.on('change', function (event) {
                 if (event.changed && event.changed.component.key === 'product' && event.changed.value) {
                     console.log(event);
+                }
+                if (event.changed && event.changed.component.key === 'description' && event.changed.value) {
+                    clearTimeout(typingTimer);
+                    typingTimer = setTimeout(() => {
+                        Coveo.executeQuery(root);
+                    }, typingTimerInterval);
                 }
             });
             form.on('render', function (event) {
