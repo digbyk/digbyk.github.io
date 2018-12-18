@@ -9,13 +9,14 @@
     <link href="sophosfavicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css" rel="stylesheet" />
-    <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.3679/css/CoveoFullSearch.css" />
-    <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
-    <script src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templatesNew.js"></script>
+    <script type="text/javascript" src="https://static.cloud.coveo.com/searchui/v2.3679/js/CoveoJsSearch.Lazy.min.js"></script>
+    <script type="text/javascript" src="https://static.cloud.coveo.com/searchui/v2.3679/js/templates/templatesNew.js"></script>
+    <script type="text/javascript" src="https://static.cloud.coveo.com/coveo.analytics.js/coveoua.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/typography.css">
-    <script type="text/javascript" src="js/forms.js"></script>
+    <script type="text/javascript" src="js/support.js"></script>
 </head>
 
 <body>
@@ -41,35 +42,12 @@
             <div class="sophosform" data-formid="supportCase"></div>
         </article>
         <aside>
-            <div id="results" class='CoveoSearchInterface' data-enable-history="true" data-enable-omnibox="true"
-                data-enable-field-addon="true" data-enable-query-extension-addon="true" data-enable-wildcards="true"
-                data-enable-lowercase-operators="true" data-enable-partial-match="true" data-trigger-query-on-clear="false">
-                <nav class="coveo-tab-section" style="display: none">
-                    <a class="CoveoTab" data-id="Support" data-caption="Support" data-pipeline="Support"
-                        data-enable-duplicate-filtering="false"></a>
-                </nav>
+            <button id="button">Click</button>
+            <div id="results" class='CoveoSearchInterface' data-design="new" data-allow-queries-without-keywords="true"
+                data-excerpt-length="140" data-enable-history="true" data-enable-duplicate-filtering="true">
                 <div class="CoveoAnalytics"></div>
-                <div class="SearchWidget">
-                    <div class='coveo-search-section'>
-                        <div class="CoveoSearchbox" data-enable-omnibox="true" data-enable-query-suggest-addon="true">
-                            <!--div class="CoveoFieldSuggestions" data-field="@title"></div-->
-                        </div>
-                    </div>
-                </div>
                 <section class="coveo-main-section">
                     <div class="coveo-results-column">
-                        <div class="CoveoPreferencesPanel">
-                            <div class="CoveoResultsPreferences"></div>
-                            <div class="CoveoResultsFiltersPreferences"></div>
-                        </div>
-                        <div class="coveo-results-header">
-                            <div class="coveo-result-layout-section">
-                                <span class="CoveoResultLayout"></span>
-                            </div>
-                        </div>
-                        <div class="CoveoHiddenQuery"></div>
-                        <div class="CoveoDidYouMean"></div>
-                        <div class="CoveoErrorReport"></div>
                         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade"
                             data-auto-select-fields-to-include="true" data-enable-infinite-scroll='false'>
                             <script type='text/html' id='baseTemplate' class='result-template'>
@@ -88,27 +66,15 @@
                                   </div>
                                 </div>
                               </script>
-
                         </div>
                         <div class="CoveoPager"></div>
                         <div class="CoveoResultsPerPage"></div>
                     </div>
                 </section>
-
             </div>
         </aside>
     </main>
     <footer></footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var root = document.querySelector('#results');
-            Coveo.SearchEndpoint.endpoints['default'] = new Coveo.SearchEndpoint({
-                restUri: 'https://platform.cloud.coveo.com/rest/search',
-                accessToken: 'xxc0743789-8066-4b9a-ba0e-8b9b137da051'
-            });
-            Coveo.init(root);
-        })
-    </script>
 </body>
 
 </html>
