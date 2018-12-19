@@ -3,8 +3,6 @@ window.onload = function () {
         restUri: 'https://platform.cloud.coveo.com/rest/search',
         accessToken: 'xxc0743789-8066-4b9a-ba0e-8b9b137da051',
         queryStringArguments: {
-            debug: 1,
-            workgroup: 'myworkgroup',
             pipeline: 'Support'
         }
     });
