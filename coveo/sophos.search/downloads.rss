@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>Sophos Product Downloads</title>
+    <subtitle>Index of all downloads
+    </subtitle>
+    <link href="http://example.org/feed/" rel="self" />
+    <link href="http://example.org/" />
+    <id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id>
+    <updated>2003-12-13T18:30:02Z</updated>
+
+
+    <entry>
+        <title>MD5 checksum text file</title>
+        <link href="https://akamai-download.cyberoam.com/version10/md5sum.txt" />
+        <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+        <updated>2019-12-13T18:30:02Z</updated>
+        <summary>This is the test MD5 checksum file</summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>This is the entry content.</p>
+            </div>
+        </content>
+        <author>
+            <name>Sophos</name>
+            <email>info@sophos.com</email>
+        </author>
+    </entry>
+
+</feed>

@@ -42,7 +42,7 @@ window.onload = function () {
                                     console.log(error);
                                 });
                         }
-                                form.submission = {
+                        form.submission = {
                             data: data
                         };
                     });
