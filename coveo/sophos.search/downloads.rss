@@ -1,65 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Sophos Downloads</title>
+        <description>Index of all Sophos file downloads</description>
+        <link>https://www.example.com/main.htmldownloads.sophos.com</link>
+        <lastBuildDate>Mon, 06 Sep 2010 00:01:00 +0000 </lastBuildDate>
+        <pubDate>Sun, 06 Sep 2009 16:20:00 +0000</pubDate>
+        <ttl>1800</ttl>
 
-<feed xmlns="http://www.w3.org/2005/Atom">
+        <item>
+            <title>MD5 checksum file</title>
+            <description>Here is some text containing an interesting description.</description>
+            <link>https://akamai-download.cyberoam.com/version10/md5sum.txt</link>
+            <guid isPermaLink="false">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
+            <pubDate>Sun, 06 Sep 2019 16:20:00 +0000</pubDate>
+        </item>
 
-    <title>Sophos Product Downloads</title>
-    <subtitle>Index of all downloads
-    </subtitle>
-    <link href="http://example.org/feed/" rel="self" />
-    <link href="http://example.org/" />
-    <id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id>
-    <updated>2003-12-13T18:30:02Z</updated>
+        <item>
+            <title>MD5 checksum file 2</title>
+            <description>Here is some text containing an interesting description.</description>
+            <link>https://akamai-download.cyberoam.com/version10/md5sum2.txt</link>
+            <guid isPermaLink="false">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
+            <pubDate>Sun, 06 Sep 2019 16:20:00 +0000</pubDate>
+        </item>
 
+        <item>
+            <title>MD5 checksum file 3</title>
+            <description>Here is some text containing an interesting description.</description>
+            <link>https://akamai-download.cyberoam.com/version10/md5sum3.txt</link>
+            <guid isPermaLink="false">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
+            <pubDate>Sun, 06 Sep 2019 16:20:00 +0000</pubDate>
+        </item>
 
-    <entry>
-        <title>MD5 checksum text file</title>
-        <link href="https://akamai-download.cyberoam.com/version10/md5sum.txt" />
-        <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
-        <updated>2019-12-13T18:30:02Z</updated>
-        <summary>This is the test MD5 checksum file</summary>
-        <content type="xhtml">
-            <div xmlns="http://www.w3.org/1999/xhtml">
-                <p>This is the entry content.</p>
-            </div>
-        </content>
-        <author>
-            <name>Sophos</name>
-            <email>info@sophos.com</email>
-        </author>
-    </entry>
-
-    <entry>
-        <title>And another MD5 checksum text file</title>
-        <link href="https://akamai-download.cyberoam.com/version10/md5sum3.txt" />
-        <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
-        <updated>2019-12-13T18:30:02Z</updated>
-        <summary>This is the test MD5 checksum file</summary>
-        <content type="xhtml">
-            <div xmlns="http://www.w3.org/1999/xhtml">
-                <p>This is the entry content.</p>
-            </div>
-        </content>
-        <author>
-            <name>Sophos</name>
-            <email>info@sophos.com</email>
-        </author>
-    </entry>
-
-    <entry>
-        <title>Another MD5 checksum text file</title>
-        <link href="https://akamai-download.cyberoam.com/version10/md5sum2.txt" />
-        <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
-        <updated>2019-12-13T18:30:02Z</updated>
-        <summary>This is the test MD5 checksum file</summary>
-        <content type="xhtml">
-            <div xmlns="http://www.w3.org/1999/xhtml">
-                <p>This is the entry content.</p>
-            </div>
-        </content>
-        <author>
-            <name>Sophos</name>
-            <email>info@sophos.com</email>
-        </author>
-    </entry>
-
-</feed>
+    </channel>
+</rss>
