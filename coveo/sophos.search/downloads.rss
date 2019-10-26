@@ -10,7 +10,7 @@
 
         <item>
             <title>MD5 checksum file</title>
-            <description>Here is some text containing an interesting description.</description>
+            <description>This is the main checksum file for something ot other</description>
             <link>https://akamai-download.cyberoam.com/version10/md5sum.txt</link>
             <guid isPermaLink="false">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
             <pubDate>Sun, 06 Sep 2019 16:20:00 +0000</pubDate>
@@ -18,7 +18,7 @@
 
         <item>
             <title>MD5 checksum file 2</title>
-            <description>Here is some text containing an interesting description.</description>
+            <description>Another checksum file</description>
             <link>https://akamai-download.cyberoam.com/version10/md5sum2.txt</link>
             <guid isPermaLink="false">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
             <pubDate>Sun, 06 Sep 2019 16:20:00 +0000</pubDate>
@@ -26,8 +26,16 @@
 
         <item>
             <title>MD5 checksum file 3</title>
-            <description>Here is some text containing an interesting description.</description>
+            <description>This is the third version of the checksum file</description>
             <link>https://akamai-download.cyberoam.com/version10/md5sum3.txt</link>
+            <guid isPermaLink="false">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
+            <pubDate>Sun, 06 Sep 2019 16:20:00 +0000</pubDate>
+        </item>
+
+        <item>
+            <title>Intercept X download</title>
+            <description>This is the third version of the checksum file</description>
+            <link>https://akamai-download.cyberoam.com/interceptx/3.8.0/filenmame.exe</link>
             <guid isPermaLink="false">7bd204c6-1655-4c27-aeee-53f933c5395f</guid>
             <pubDate>Sun, 06 Sep 2019 16:20:00 +0000</pubDate>
         </item>
