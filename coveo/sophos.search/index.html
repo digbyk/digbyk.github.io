@@ -88,6 +88,7 @@
         data-caption="Downloads"
         data-pipeline="Product Downloads"
         data-enable-duplicate-filtering="false"
+        data-sort="date descending"
       ></a>
     </nav>
     <main>
@@ -122,19 +123,27 @@
             data-custom-sort="Web, Knowledge Base, Community, Documentation"
             data-tab="All,Support"
           ></div>
-          <div
-            class="CoveoDynamicHierarchicalFacet"
-            data-title="Product"
-            data-field="@sophosproducthierarchy"
-            data-tab="Downloads"
-          ></div>
-          <div
-            class="CoveoDynamicHierarchicalFacet"
-            data-title="Folder"
-            data-field="@s3hierarchy"
-            data-tab="Downloads"
-            data-base-path="coveo-dload-poc,content"
-          ></div>
+          <div class="CoveoDynamicFacetManager">
+            <div
+              class="CoveoDynamicHierarchicalFacet"
+              data-title="Product"
+              data-field="@sophosproducthierarchy"
+              data-tab="Downloads"
+            ></div>
+            <div
+              class="CoveoDynamicHierarchicalFacet"
+              data-title="Version"
+              data-field="@sophosproductversion"
+              data-tab="Downloads"
+            ></div>
+            <div
+              class="CoveoDynamicHierarchicalFacet"
+              data-title="Folder"
+              data-field="@s3hierarchy"
+              data-tab="Downloads"
+              data-base-path="coveo-dload-poc,content"
+            ></div>
+          </div>
           <div
             class="CoveoFacet"
             data-title="Language"
@@ -156,10 +165,10 @@
             data-tab="Support, Labs"
           ></div>
           <div
-            class="CoveoFacet"
-            data-title="File Type"
+            class="CoveoDynamicFacet"
+            data-title="File type"
             data-field="@filetype"
-            data-tab="Support, Labs"
+            data-tab="Support,Downloads"
           ></div>
           <div
             class="CoveoFacet"
