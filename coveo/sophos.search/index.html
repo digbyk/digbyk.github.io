@@ -96,7 +96,6 @@
         data-caption="KBs"
         data-pipeline="KBs"
         data-enable-duplicate-filtering="false"
-        data-sort="date descending"
       ></a>
     </nav>
     <main>
@@ -138,6 +137,7 @@
               data-field="@sfdcexpandedknowledgebase"
               data-tab="KBs"
               data-number-of-values="12"
+              data-custom-sort="Sophos Central,XG Firewall,Endpoint Security and Control"
               data-base-path="All"
             ></div>
             <div
@@ -177,10 +177,12 @@
               data-base-path="coveo-dload-poc|content"
             ></div>
             <div
-              class="CoveoFacetRange"
+              class="CoveoFacetSlider"
               data-title="Date"
               data-field="@indexeddate"
               data-tab="Downloads"
+              data-range-slider="true"
+              data-graph-steps="true"
               data-date-field="true"
             ></div>
           </div>
