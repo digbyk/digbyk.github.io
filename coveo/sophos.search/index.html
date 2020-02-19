@@ -90,6 +90,13 @@
         data-enable-duplicate-filtering="false"
         data-sort="date descending"
       ></a>
+      <a
+        class="CoveoTab"
+        data-id="KBs"
+        data-caption="KBs"
+        data-pipeline="KBs"
+        data-enable-duplicate-filtering="false"
+      ></a>
     </nav>
     <main>
       <section>
@@ -109,32 +116,57 @@
       <section class="coveo-main-section">
         <div class="coveo-facet-column">
           <div
-            class="CoveoFacet"
+            class="CoveoDynamicFacet"
             data-title="Source"
             data-field="@source"
-            data-number-of-values="30"
+            data-number-of-values="8"
             data-tab="All,Support"
           ></div>
           <div
-            class="CoveoFacet"
+            class="CoveoDynamicFacet"
             data-title="Type"
             data-field="@sophossourcetype"
-            data-number-of-values="50"
+            data-number-of-values="8"
             data-custom-sort="Web, Knowledge Base, Community, Documentation"
             data-tab="All,Support"
           ></div>
           <div class="CoveoDynamicFacetManager">
             <div
               class="CoveoDynamicHierarchicalFacet"
+              data-title="Category"
+              data-field="@sfdcexpandedknowledgebase"
+              data-tab="KBs"
+              data-number-of-values="12"
+              data-basepath="All,General"
+            ></div>
+            <div
+              class="CoveoDynamicFacet"
+              data-title="Language"
+              data-field="@language"
+              data-custom-sort="english, french, german, spanish, italian, portuguese, chinese, japanese, danish"
+              data-number-of-values="5"
+              data-tab="KBs"
+            ></div>
+            <div
+              class="CoveoFacetRange"
+              data-title="Date"
+              data-field="@date"
+              data-tab="KBs"
+              data-date-field="true"
+            ></div>
+          </div>
+          <div class="CoveoDynamicFacetManager">
+            <div
+              class="CoveoDynamicHierarchicalFacet"
               data-title="Product"
               data-field="@sophosproducthierarchy"
-              data-tab="Downloads"
+              data-tab="Support"
             ></div>
             <div
               class="CoveoDynamicFacet"
               data-title="Version"
               data-field="@sophosproductversion"
-              data-tab="Downloads"
+              data-tab="Support"
             ></div>
             <div
               class="CoveoDynamicHierarchicalFacet"
@@ -152,7 +184,7 @@
             ></div>
           </div>
           <div
-            class="CoveoFacet"
+            class="CoveoDynamicFacet"
             data-title="Language"
             data-field="@language"
             data-custom-sort="english, french, german, spanish, italian, portuguese, chinese, japanese, danish"
@@ -160,13 +192,13 @@
             data-tab="All,Support"
           ></div>
           <div
-            class="CoveoFacet"
+            class="CoveoDynamicFacet"
             data-title="Author"
             data-field="@author"
             data-tab="Support"
           ></div>
           <div
-            class="CoveoFacet"
+            class="CoveoDynamicFacet"
             data-title="Document Type"
             data-field="@documenttype"
             data-tab="Support, Labs"
@@ -176,18 +208,6 @@
             data-title="File type"
             data-field="@filetype"
             data-tab="Support,Downloads"
-          ></div>
-          <div
-            class="CoveoFacet"
-            data-title="Year"
-            data-field="@year"
-            data-tab="Support"
-          ></div>
-          <div
-            class="CoveoFacet"
-            data-title="Month"
-            data-field="@month"
-            data-tab="Support"
           ></div>
         </div>
         <div class="coveo-results-column">
