@@ -4,9 +4,13 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-body>section {
-	height: 400px;
-}
-body>section:nth-child(1) {
-	background-color: #666;
+bodyn {
+	height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+	background-color: black;
 }
